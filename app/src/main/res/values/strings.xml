@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Saufkomatiko</string>
+    <string name="hier_namen_eingeben">Hier Namen eingeben</string>
+    <string name="hinzuf_gen">Hinzufügen</string>
 </resources>

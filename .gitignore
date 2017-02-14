@@ -10,11 +10,15 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+App-1.iml
+app/src/androidTest/androidTest.iml
+app/src/main/main.iml
+app/src/test/test.iml
 
 #IntelliJ
 .idea/
 .gradle
+build/
 
 #AndroidStudio
 local.properties
-build/
