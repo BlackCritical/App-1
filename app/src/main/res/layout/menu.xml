@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="1">
@@ -14,13 +15,30 @@
 
     <Button
         android:text="@string/hinzuf_gen"
+        android:onClick="coolerClicker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/add"
-        android:layout_weight="0.05" />
+        android:layout_weight="0.05"
+        android:textColor="@android:color/black"
+        android:backgroundTint="@color/colorPrimaryDark" />
+
+    <TextView
+        android:text="@string/bitte_f_ge_die_namen_aller_mitspieler_hinzu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_weight="0.10"
+        tools:text="Bitte füge die Namen aller Mitspieler hinzu!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:lineSpacingExtra="8sp"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/colorAccent" />
 
     <ListView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="0.05" />
+        android:layout_height="379dp" />
 </LinearLayout>
