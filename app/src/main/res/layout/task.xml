@@ -5,6 +5,7 @@
     app:srcCompat="@mipmap/download"
     android:adjustViewBounds="false"
     android:cropToPadding="false"
-    android:id="@+id/taskImages">
+    android:id="@+id/taskImages"
+    android:contentDescription="@string/here_are_the_different_task_displayed">
 
 </ImageView>
