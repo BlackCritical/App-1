@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:textAlignment="center">
 
     <EditText
         android:layout_width="match_parent"
@@ -17,18 +18,17 @@
         android:text="@string/hinzuf_gen"
         android:onClick="coolerClicker"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="66dp"
         android:id="@+id/add"
-        android:layout_weight="0.05"
         android:textColor="@android:color/black"
-        android:backgroundTint="@color/colorPrimaryDark" />
+        android:backgroundTint="@color/colorPrimaryDark"
+        style="@android:style/Widget.Material.Light.Button" />
 
     <TextView
         android:text="@string/bitte_f_ge_die_namen_aller_mitspieler_hinzu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="93dp"
         android:id="@+id/textView2"
-        android:layout_weight="0.10"
         tools:text="Bitte füge die Namen aller Mitspieler hinzu!"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textAlignment="center"
@@ -40,5 +40,15 @@
     <ListView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="379dp" />
+        android:layout_height="246dp" />
+
+    <Button
+        android:text="Start Game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:backgroundTint="@color/colorPrimaryDark"
+        style="@android:style/Widget.Material.Light.Button"
+        android:textAlignment="center"
+        android:textColor="@android:color/black" />
 </LinearLayout>

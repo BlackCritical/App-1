@@ -30,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.menu);
     }
 
+    public void startGame(View v){
+
+    }
+
     public void addPlayer(View v){
         EditText textBox = (EditText) findViewById(R.id.textBox);
         ListView listView = (ListView) findViewById(R.id.textView);
