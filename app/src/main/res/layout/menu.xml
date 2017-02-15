@@ -16,7 +16,7 @@
 
     <Button
         android:text="@string/hinzuf_gen"
-        android:onClick="coolerClicker"
+        android:onClick="addPlayer"
         android:layout_width="match_parent"
         android:layout_height="66dp"
         android:id="@+id/add"
@@ -44,6 +44,7 @@
 
     <Button
         android:text="Start Game"
+        android:onClick="startGame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button"

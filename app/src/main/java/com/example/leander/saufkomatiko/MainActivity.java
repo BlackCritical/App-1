@@ -2,6 +2,7 @@ package com.example.leander.saufkomatiko;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,7 +32,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startGame(View v){
-
+        Intent intent = new Intent(this, StartGameActivity.class);
+        intent.putExtra("players", list);
+        startActivity(intent);
     }
 
     public void addPlayer(View v){
@@ -43,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         adap = new ArrayAdapter<>(this, R.layout.listlayout, list);
         listView.setAdapter(adap);
 
-        Toast.makeText(this, "Name Added " + textBox.getText().toString(), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Name Added " + textBox.getText().toString(), Toast.LENGTH_SHORT).show();
         textBox.setText("");
     }
 
@@ -56,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
 
         MeinAdapterino ada = new MeinAdapterino(this, R.layout.stackoverflow, list);
         listView.setAdapter(ada);
+
+        Toast.makeText(this, "Name Added " + editBox.getText().toString(), Toast.LENGTH_SHORT).show();
         editBox.setText("");
     }
 
