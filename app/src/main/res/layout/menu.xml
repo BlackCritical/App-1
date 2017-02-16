@@ -9,7 +9,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:id="@+id/textBox"
+        android:id="@+id/nameField"
         android:hint="@string/hier_namen_eingeben"
         android:textAlignment="center"
         android:textSize="18sp" />
@@ -21,35 +21,38 @@
         android:layout_height="66dp"
         android:id="@+id/add"
         android:textColor="@android:color/black"
-        android:backgroundTint="@color/colorPrimaryDark"
-        style="@android:style/Widget.Material.Light.Button" />
+        android:backgroundTint="@color/colorPrimaryDark"/>
+
 
     <TextView
         android:text="@string/bitte_f_ge_die_namen_aller_mitspieler_hinzu"
         android:layout_width="match_parent"
         android:layout_height="93dp"
-        android:id="@+id/textView2"
+        android:id="@+id/manual"
         tools:text="Bitte füge die Namen aller Mitspieler hinzu!"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textAlignment="center"
         android:textSize="30sp"
         android:lineSpacingExtra="8sp"
         android:fontFamily="sans-serif"
-        android:textColor="@color/colorAccent" />
+        android:textColor="@color/colorAccent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+        <requestFocus/>
+    </TextView>
 
     <ListView
-        android:id="@+id/textView"
+        android:id="@+id/playerList"
         android:layout_width="match_parent"
         android:layout_height="246dp" />
 
     <Button
-        android:text="Start Game"
+        android:text="@string/start_the_game"
         android:onClick="startGame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
+        android:id="@+id/start"
         android:backgroundTint="@color/colorPrimaryDark"
-        style="@android:style/Widget.Material.Light.Button"
         android:textAlignment="center"
         android:textColor="@android:color/black" />
 </LinearLayout>

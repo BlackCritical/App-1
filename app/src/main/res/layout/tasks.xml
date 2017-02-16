@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/displayTask"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="30sp"
+        android:textIsSelectable="false"
+        android:textAlignment="center"
+        android:text="\n\nHello!\n Press next to start playing!"/>
+
+    <ImageSwitcher
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageSw" >
+
+    </ImageSwitcher>
+
+    <Button
+        android:text="Next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="36dp"
+        android:layout_marginEnd="36dp"
+        android:id="@+id/next"
+        android:layout_alignBaseline="@+id/prev"
+        android:layout_alignBottom="@+id/prev"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="next"/>
+
+    <Button
+        android:text="Previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/prev"
+        android:layout_marginLeft="35dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentBottom="true"
+        android:onClick="previous"/>
+</RelativeLayout>
