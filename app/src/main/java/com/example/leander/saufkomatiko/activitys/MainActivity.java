@@ -1,4 +1,4 @@
-package com.example.leander.saufkomatiko;
+package com.example.leander.saufkomatiko.activitys;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.example.leander.saufkomatiko.R;
 
 import java.util.ArrayList;
 
