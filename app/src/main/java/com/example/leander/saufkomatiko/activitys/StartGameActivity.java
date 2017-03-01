@@ -27,6 +27,9 @@ public class StartGameActivity extends AppCompatActivity{
     private int[] images = {R.drawable.android_device_frame_land, R.drawable.phoneportraitvlandscape,
                             R.drawable.pic, R.drawable.code};
     private int[] colors = {R.color.colorAccent, R.color.colorPrimary, R.color.colorPrimaryDark};
+    private int[] tasks = {R.string.task1, R.string.task2,
+            R.string.task3, R.string.task4};
+
     private ArrayList<String> players;
 
     private int i = 0;
@@ -79,25 +82,27 @@ public class StartGameActivity extends AppCompatActivity{
                 i = players.size();
             TextView displayTask = (TextView) findViewById(R.id.displayTask);
             displayTask.bringToFront();
-            displayTask.setText("\nHello,\n" + players.get(--i) +
-                    "\n you have to punch your neighbour, or drink 23 shots!");
+            displayTask.setText(String.format(getString(tasks[random]), players.get(++i)));
         }
     }
 
     public void next(View v){
         imgSw.setInAnimation(inNext);
         imgSw.setOutAnimation(outNext);
+
         TextView displayTask = (TextView) findViewById(R.id.displayTask);
         displayTask.bringToFront();
         if(i >= players.size() - 1)
             i = -1;
-        displayTask.setText("\nHello,\n" + players.get(++i) +
-                "\n you have to punch your neighbour, or drink 23 shots!");
 
         isPrevious = false;
         last = random;
         while(random == last)
             random = (int) (Math.random() * images.length);
+
+        displayTask.setText(String.format(getString(tasks[random]), players.get(++i)));
+
+
         //imgSw.setBackgroundColor(colors[random]);
         imgSw.setImageResource(images[random]);
     }
