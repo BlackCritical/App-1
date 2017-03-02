@@ -26,9 +26,9 @@ public class StartGameActivity extends AppCompatActivity{
     private ImageSwitcher imgSw;
     private int[] images = {R.drawable.android_device_frame_land, R.drawable.phoneportraitvlandscape,
                             R.drawable.pic, R.drawable.code};
+    //private int[] images2 = {R.drawable.black, R.drawable.blackk, R.drawable.orange};
     private int[] colors = {R.color.colorAccent, R.color.colorPrimary, R.color.colorPrimaryDark};
-    private int[] tasks = {R.string.task1, R.string.task2,
-            R.string.task3, R.string.task4};
+    private String[] tasks;
 
     private ArrayList<String> players;
 
@@ -66,6 +66,9 @@ public class StartGameActivity extends AppCompatActivity{
 
         Intent intent = getIntent();
         players = intent.getStringArrayListExtra("players");
+
+        tasks = new String[]{getString(R.string.task1), getString(R.string.task2),
+                getString(R.string.task3), getString(R.string.task4)};
     }
 
     public void previous(View v){
@@ -82,7 +85,7 @@ public class StartGameActivity extends AppCompatActivity{
                 i = players.size();
             TextView displayTask = (TextView) findViewById(R.id.displayTask);
             displayTask.bringToFront();
-            displayTask.setText(String.format(getString(tasks[random]), players.get(++i)));
+            displayTask.setText(String.format(tasks[random], players.get(--i)));
         }
     }
 
@@ -100,7 +103,7 @@ public class StartGameActivity extends AppCompatActivity{
         while(random == last)
             random = (int) (Math.random() * images.length);
 
-        displayTask.setText(String.format(getString(tasks[random]), players.get(++i)));
+        displayTask.setText(String.format(tasks[random], players.get(++i)));
 
 
         //imgSw.setBackgroundColor(colors[random]);
