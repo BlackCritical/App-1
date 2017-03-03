@@ -13,15 +13,18 @@ import com.example.leander.saufkomatiko.R;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class SelectPlayerActivity extends AppCompatActivity {
 
     public ArrayList<String> list = new ArrayList<>();
     public ArrayAdapter<String> adap;
+    private boolean gamemode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu);
+
+        gamemode = getIntent().getBooleanExtra("gamemode", true);
     }
 
     public void startGame(View v){
@@ -30,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             Intent intent = new Intent(this, StartGameActivity.class);
             intent.putExtra("players", list);
+            intent.putExtra("gamemode", gamemode);
             startActivity(intent);
         }
     }

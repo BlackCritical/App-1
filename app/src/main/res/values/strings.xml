@@ -9,4 +9,6 @@
     <string name="task2">Mmmmmm %s mmmmmmmmm</string>
     <string name="task3">wwwwww %s wwwwww</string>
     <string name="task4">aaaaa aaaa %s aaaa aa aaa</string>
+    <string name="saufen">Saufen!</string>
+    <string name="buffen">Buffen!</string>
 </resources>

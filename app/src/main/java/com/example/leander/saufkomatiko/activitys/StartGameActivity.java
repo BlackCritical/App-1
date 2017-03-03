@@ -64,8 +64,8 @@ public class StartGameActivity extends AppCompatActivity{
         imgSw.setInAnimation(inNext);
         imgSw.setOutAnimation(outNext);
 
-        Intent intent = getIntent();
-        players = intent.getStringArrayListExtra("players");
+
+        players = getIntent().getStringArrayListExtra("players");
 
         tasks = new String[]{getString(R.string.task1), getString(R.string.task2),
                 getString(R.string.task3), getString(R.string.task4)};
