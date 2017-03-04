@@ -1,6 +1,5 @@
 package com.example.leander.saufkomatiko.activitys;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -21,7 +20,7 @@ import java.util.ArrayList;
  * Created by Leander on 15.02.2017.
  */
 
-public class StartGameActivity extends AppCompatActivity{
+public class PlayGameActivity extends AppCompatActivity{
 
     private ImageSwitcher imgSw;
     private int[] images = {R.drawable.android_device_frame_land, R.drawable.phoneportraitvlandscape,
@@ -35,6 +34,7 @@ public class StartGameActivity extends AppCompatActivity{
     private int i = 0;
     private int random;
     private int last;
+    private int lastNumber;
     private boolean isPrevious = false;
 
     private Animation inNext;
@@ -85,7 +85,7 @@ public class StartGameActivity extends AppCompatActivity{
                 i = players.size();
             TextView displayTask = (TextView) findViewById(R.id.displayTask);
             displayTask.bringToFront();
-            displayTask.setText(String.format(tasks[random], players.get(--i)));
+            displayTask.setText(String.format(tasks[random], players.get(--i), lastNumber));
         }
     }
 
@@ -103,7 +103,10 @@ public class StartGameActivity extends AppCompatActivity{
         while(random == last)
             random = (int) (Math.random() * images.length);
 
-        displayTask.setText(String.format(tasks[random], players.get(++i)));
+        lastNumber = (int) (Math.random() * 5 + 2);
+
+        //(random * lastNumber) % tasks.length ===> Random zahl die nie OutOfBound schmeißt
+        displayTask.setText(String.format(tasks[(random * lastNumber) % tasks.length], players.get(++i), lastNumber));
 
 
         //imgSw.setBackgroundColor(colors[random]);

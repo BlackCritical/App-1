@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:screenOrientation="landscape" android:name=".activitys.StartGameActivity"
+        <activity android:screenOrientation="landscape" android:name=".activitys.PlayGameActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity android:name=".activitys.SelectPlayerActivity"/>

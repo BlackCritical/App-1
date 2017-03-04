@@ -9,11 +9,11 @@ import static org.junit.Assert.*;
  * Created by Leander on 20.02.2017.
  */
 @Ignore
-public class StartGameActivityTest {
+public class PlayGameActivityTest {
 
     @Test
     public void stringGetsReturned() throws Exception {
-        StartGameActivity activity = new StartGameActivity();
+        PlayGameActivity activity = new PlayGameActivity();
 
         assertEquals("Mach was", activity.getRandomTask());
     }

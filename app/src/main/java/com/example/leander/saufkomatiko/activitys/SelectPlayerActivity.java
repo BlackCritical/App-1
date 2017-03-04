@@ -31,7 +31,7 @@ public class SelectPlayerActivity extends AppCompatActivity {
         if(list.isEmpty())
             Toast.makeText(this, "You need at least one Player", Toast.LENGTH_SHORT).show();
         else {
-            Intent intent = new Intent(this, StartGameActivity.class);
+            Intent intent = new Intent(this, PlayGameActivity.class);
             intent.putExtra("players", list);
             intent.putExtra("gamemode", gamemode);
             startActivity(intent);
