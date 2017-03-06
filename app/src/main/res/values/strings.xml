@@ -8,7 +8,12 @@
     <string name="task1" formatted="false">Hey, %s dein linker Nachbar muss %d Schlücke trinken!</string>
     <string name="task2" formatted="false">%s, du musst entweder %d Schlücke trinken oder zieh dein Oberteil aus!</string>
     <string name="task3" formatted="false">%s, du musst %d Schlücke trinken. Wenn du der älteste Mitspieler bist musst du das doppelte trinken!</string>
-    <string name="task4" formatted="false">%s und %s müssen beide die Luft anhalten. Wer als erstes nicht mehr den Atem halten kann muss %d Schlücke trinken.</string>
+    <string name="task4" formatted="false">%s und (deine mama) müssen beide die Luft anhalten. Wer als erstes nicht mehr den Atem halten kann muss %d Schlücke trinken.</string>
+    <string name="task1W" formatted="false">%s, muss %d Züge ziehen.</string>
+    <string name="task2W" formatted="false">%s, muss %d Bonghits ballern.</string>
     <string name="saufen">Saufen!</string>
     <string name="buffen">Buffen!</string>
+    <string name="n_nhello_n_press_next_to_start_playing">Hello!  \nPress next to start playing!</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 </resources>

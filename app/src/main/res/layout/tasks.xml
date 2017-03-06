@@ -4,14 +4,17 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/displayTask"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/displayTask"
-        android:textColor="@android:color/holo_green_dark"
-        android:textSize="30sp"
-        android:textIsSelectable="false"
+        android:gravity="center"
+        android:lineSpacingExtra="8sp"
+        android:text="@string/n_nhello_n_press_next_to_start_playing"
         android:textAlignment="center"
-        android:text="\n\nHello!\n Press next to start playing!"/>
+        android:textColor="@android:color/holo_green_dark"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <ImageSwitcher
         android:layout_width="match_parent"
@@ -21,7 +24,7 @@
     </ImageSwitcher>
 
     <Button
-        android:text="Next"
+        android:text="@string/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="36dp"
@@ -34,7 +37,7 @@
         android:onClick="next"/>
 
     <Button
-        android:text="Previous"
+        android:text="@string/previous"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/prev"

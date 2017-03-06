@@ -32,8 +32,11 @@ public class PlayGameActivity extends AppCompatActivity{
     private ArrayList<String> players;
 
     private int i = 0;
-    private int random;
-    private int last;
+    private int randomTask;
+    private int randomImage;
+    private int randomNumber;
+    private int lastTask;
+    private int lastImage;
     private int lastNumber;
     private boolean isPrevious = false;
 
@@ -67,25 +70,33 @@ public class PlayGameActivity extends AppCompatActivity{
 
         players = getIntent().getStringArrayListExtra("players");
 
-        tasks = new String[]{getString(R.string.task1), getString(R.string.task2),
-                getString(R.string.task3), getString(R.string.task4)};
+        if (getIntent().getBooleanExtra("gamemode", true))
+            tasks = new String[]{getString(R.string.task1), getString(R.string.task2),
+                    getString(R.string.task3), getString(R.string.task4)};
+        else
+            tasks = new String[]{getString(R.string.task1W), getString(R.string.task2W)};
+
     }
 
     public void previous(View v){
         imgSw.setInAnimation(inPrev);
         imgSw.setOutAnimation(outPrev);
-        random = last;
+
+        randomTask = lastTask;
+        randomNumber = lastNumber;
+        randomImage = lastImage;
+
         if (isPrevious)
             Toast.makeText(this, "You can only go back once!", Toast.LENGTH_SHORT).show();
         else {
-            imgSw.setImageResource(images[last]);
+            imgSw.setImageResource(images[lastImage]);
             isPrevious = true;
 
             if (i == 0)
                 i = players.size();
             TextView displayTask = (TextView) findViewById(R.id.displayTask);
             displayTask.bringToFront();
-            displayTask.setText(String.format(tasks[random], players.get(--i), lastNumber));
+            displayTask.setText(String.format(tasks[lastTask], players.get(--i), lastNumber));
         }
     }
 
@@ -99,18 +110,20 @@ public class PlayGameActivity extends AppCompatActivity{
             i = -1;
 
         isPrevious = false;
-        last = random;
-        while(random == last)
-            random = (int) (Math.random() * images.length);
+        lastTask = randomTask;
+        lastImage = randomImage;
+        lastNumber = randomNumber;
+        while(randomTask == lastTask || randomNumber == lastNumber) {
+            randomImage = (int) (Math.random() * images.length);
+            randomTask = (int) (Math.random() * tasks.length);
+            randomNumber = (int) (Math.random() * 4 + 2);
+        }
 
-        lastNumber = (int) (Math.random() * 5 + 2);
-
-        //(random * lastNumber) % tasks.length ===> Random zahl die nie OutOfBound schmeißt
-        displayTask.setText(String.format(tasks[(random * lastNumber) % tasks.length], players.get(++i), lastNumber));
+        displayTask.setText(String.format(tasks[randomTask], players.get(++i), randomNumber));
 
 
-        //imgSw.setBackgroundColor(colors[random]);
-        imgSw.setImageResource(images[random]);
+        //imgSw.setBackgroundColor(colors[randomTask]);
+        imgSw.setImageResource(images[randomImage]);
     }
 
     public String getRandomTask(){
