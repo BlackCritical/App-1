@@ -6,8 +6,15 @@
     <string name="bitte_f_ge_die_namen_aller_mitspieler_hinzu">Bitte füge die Namen aller Mitspieler hinzu!</string>
     <string name="here_are_the_different_task_displayed">Hier werden die verschiedene Trinkaufgaben dargestellt</string>
     <string name="start_the_game">Starte das Spiel!</string>
-    <string name="task1">Hey, %s Mach was</string>
-    <string name="task2">Mmmmmm %s mmmmmmmmm</string>
-    <string name="task3">wwwwww %s wwwwww</string>
-    <string name="task4">aaaaa aaaa %s aaaa aa aaa</string>
+    <string name="task1" formatted="false">Hey, %s dein linker Nachbar muss %d Schlücke trinken!</string>
+    <string name="task2" formatted="false">%s, du musst entweder %d Schlücke trinken oder zieh dein Oberteil aus!</string>
+    <string name="task3" formatted="false">%s, du musst %d Schlücke trinken. Wenn du der älteste Mitspieler bist musst du das doppelte trinken!</string>
+    <string name="task4S" formatted="false">%s und %s müssen beide die Luft anhalten. Wer als erstes nicht mehr den Atem halten kann muss %d Schlücke trinken.</string>
+    <string name="task1W" formatted="false">%s, muss %d Züge ziehen.</string>
+    <string name="task2W" formatted="false">%s, muss %d Bonghits ballern.</string>
+    <string name="saufen">Saufen!</string>
+    <string name="buffen">Buffen!</string>
+    <string name="n_nhello_n_press_next_to_start_playing">Hello!\nPress next to start playing!</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 </resources>
